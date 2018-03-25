@@ -1,0 +1,126 @@
+/*
+black: #4d4d4d
+yellow: #ff9b3c, .6
+*/
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    color: #4d4d4d;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px
+}
+
+main {
+    position: relative;
+    z-index: 0;
+
+    width: 100%;
+    max-width: 800px;
+    margin: 25px;
+    padding: 50px;
+    background-color: #F0EEEB;
+}
+
+section {
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.intro {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+/* typography ----------------------------------------------------------------*/
+h1 {
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    font-size: 140px;
+    letter-spacing: -3px;
+    margin: 0;
+    line-height: 0;
+}
+
+h1.intro__last-name {
+    position: relative;
+    top: 0;
+    left: 450px;
+}
+
+h1::after {
+    display: inline-block;
+    color: #ff9b3c;
+    opacity: .75;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: -1;
+}
+h1.intro__first-name::after {
+    content: 'Kimber';
+}
+h1.intro__last-name::after {
+    content: 'Lynch';
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    position: relative;
+    margin: 0 0 30px 0;
+}
+h2::after {
+    content: '';
+    display: inline-block;
+    background-color: #ff9b3c;
+    opacity: .6;
+    width: 50%;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    font-size: 12px;
+}
+ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+ul > li {
+    margin: 3px 0;
+}
+
+.intro__subtitle {
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p.bio__text {
+    font-size: 17px;
+    line-height: 1.25;
+}
+
+/* skills ---------------------------------------------------------------------*/
+.skills {
+    display: flex;
+    margin: 0 -15px;
+}
+
+.skills__column {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 0 15px;
+}
