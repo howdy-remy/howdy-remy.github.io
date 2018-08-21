@@ -3,13 +3,13 @@ $(function() {
     $('#front-end').click( () =>
         $('.intro__deets').replaceWith(
             `<p class='intro__deets'>
-            I’m a front-end tech lead at Tracer, a marketing data aggregation and analytics platform–what a mouthful! Previously I’ve been at home in creative agencies building client websites and internal tools. Currently I’m working with an Ember/Coffeescript/Sass/Python stack&mdash;what are { curly brackets } again?
+            I am a front-end tech lead at Tracer, a marketing data aggregation and analytics platform. Previously I’ve been at home in creative agencies building client websites and internal tools. Currently I’m working with Ember, Coffeescript, Sass, and Python&mdash;what are { curly brackets } again?
             </p>`     
         ));
     $('#design').click( () =>
         $('.intro__deets').replaceWith(
             `<p class='intro__deets'>
-            Before diving into full time web development I was a designer at Visual Dialogue, a small agency working on big projects. Over five years I worked on a couple dozen brands doing a variety of projects including branding, books, magazines, music packaging, web sites, ecommerce platforms, advertising, and more.
+            Before diving into full time web development I was a senior designer at Visual Dialogue, a small agency working on big projects. Over five years I worked on a couple dozen brands doing a variety of projects including branding, books, magazines, music packaging, web sites, ecommerce platforms, advertising, you name it.
             </p>`    
         ));
     $('#awesome').click( () =>
