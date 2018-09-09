@@ -2,16 +2,18 @@
 font-family: 'Playfair Display', serif;
 font-family: 'Montserrat', sans-serif;*/
 
+
 body {
-    color: #4a4a4a;
-	font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+    color: #4a4a4a;
 }
 *, *:after, *:before {
 	box-sizing: inherit;
     margin: 0;
     padding: 0;
 }
+
 a {
     color: inherit;
     text-decoration: none;
@@ -33,46 +35,51 @@ p {
     margin-bottom: 10px;
 }
 
+
+
 /* INTRO ---------------------------------------------------------------------*/
 .intro {
     position: relative;
     z-index: 5;
     display: flex;
+	
+    width: 100%;
     height: 90vh;
     max-height: 600px;
-	width: 100%;
     padding: 50px 100px 72px 100px;
-    font-family: 'Merriweather', serif;
     box-shadow: 0 0 40px rgba(10, 10, 10, .2);
+   
+    font-family: 'Merriweather', serif;
 }
 
 .intro__left {
+    flex-shrink: 0;
     width: 33%; 
     margin-right: 12px;
-    flex-shrink: 0;
-}
-
-h1 {
-  font-family: 'Playfair Display';
-  font-size: 100px;
-  margin: 0;
 }
 
 .intro__right {
-    padding-top: 100px;
     display: flex;
     flex-direction: column;
+    padding-top: 100px;
     max-width: 640px;
 }
-.intro__leader,
-.intro__blurb {
-    font-size: 24px;
-    margin: 0 0 36px 0;
+
+
+h1 {
+  margin: 0;
+  font-family: 'Playfair Display';
+  font-size: 100px;
 }
 
-.intro__blurb {
-    margin-bottom: 72px;
+.intro__text {
+    font-size: 24px;
+    margin: 0 0 72px 0;
 }
+.intro__text:first-child {
+    margin-bottom: 36px;
+}
+
 .intro__deets {
     position: relative;
     margin: 0;
@@ -132,23 +139,11 @@ h1 {
 .projects__leader {
 	font-family: 'Merriweather', serif;
     font-size: 24px;
-    margin-bottom: 72px;
+    margin-bottom: 47px;
     max-width: calc(64% + 12px);
 }
 
-.projects__awards {
-    position: relative;
-    max-width: calc(64% + 12px);
-    margin: 0 0 72px 0;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-style: italic;
-}
-.projects__awards::before {
-    content: 'Oh, and these people thought this stuff was cool:';
-    position: absolute;
-    top: -20px;
-    display: block;
+.projects__awards-header{
 	font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     font-weight: 700;
@@ -157,7 +152,14 @@ h1 {
 	letter-spacing: 1px;
     color: #FA8072;
 }
-
+.projects__awards {
+    position: relative;
+    max-width: calc(64% + 12px);
+    margin: 0 0 72px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
 .projects__container {
     display: flex;
     flex-wrap: wrap;
@@ -166,6 +168,9 @@ h1 {
     margin: -12px;
 }
 
+
+
+/* PROJECT -------------------------------------------------------------------*/
 .project {
     flex-grow: 0;
     width: calc(33% - 24px);
@@ -174,10 +179,12 @@ h1 {
     border-top: 6px solid;
     transition: all .25s;
 }
+
 .project__fade-out {
     opacity: .3;
     transition: all 1s;
 }
+
 .project:hover > .project__link::after {
     width: 100%;
     background-color: #FA8072;
@@ -189,6 +196,7 @@ h1 {
     font-size: 16px;
     text-transform: uppercase;
 }
+
 .project__description {
     position: relative;
     margin-bottom: 16px;
@@ -205,6 +213,7 @@ h1 {
     font-style: italic;
     font-size: 12px;
 }
+
 .project__tags,
 .project__link {
     position: relative;
@@ -216,10 +225,12 @@ h1 {
 	letter-spacing: 1px;
     display: inline-block;
 }
+
 .project__link {
     display: inline-block;
     margin-bottom: 12px;
 }
+
 .project__tags {
     color: inherit;
     display: block;
@@ -236,23 +247,46 @@ h1 {
     background-color: transparent;
     transition: width 1s;
 }
+
 .project > .project__link:hover::after {
     background-color: #fb9f95;
 }
 
+
+@media (max-width: 880px) { 
+    .projects__leader, .projects__awards {
+        max-width: none;
+    }
+    .project {
+        width: calc(50% - 24px);
+    }
+}
+
+@media (max-width: 480px) { 
+    .project {
+        width: 100%;
+    }
+}
+
+
+
+/* PROJECT DETAIL ------------------------------------------------------------*/
 .project-detail {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
 }
+
 .project-detail > .project {
     margin: 36px;
     width: calc(33% - 72px);
 }
+
 .project__image--two-thirds-inset{
     margin: 60px;
     width: calc(66% - 120px);
 }
+
 .project__image--full {
     width: 100%;
 }
@@ -263,15 +297,18 @@ h1 {
     margin: 60px;
     object-fit: cover;
 }
+
 .project__image--short {
     height: 50vw;
     object-fit: cover;
     object-position: 0 0;
 }
+
 .project__image--two-thirds {
     width: 66%;
     flex-grow: 1;
 }
+
 .back {
     display: block;
     margin: -9px 0 18px 0;
@@ -288,19 +325,15 @@ h1 {
     cursor: pointer;
 }
 
-@media (max-width: 880px) { 
-    .projects__leader, .projects__awards {
-        max-width: none;
-    }
-    .project {
-        width: calc(50% - 24px);
-    }
+.back--end {
+    border-top: 1px solid #4a4a4a;
+    border-bottom: 1px solid #4a4a4a;
+    margin: 36px;
+    padding-top: 9px;
+    width: calc(33% - 72px);
 }
-@media (max-width: 480px) { 
-    .project {
-        width: 100%;
-    }
-}
+
+
 /* say hi -------------------------------------------------------------------*/
 .say-hi {
     position: relative;
@@ -338,9 +371,9 @@ h1 {
     margin-left: 15px;
 }
 
-@media (max-width: 650px) { 
+
+@media screen and (max-width: 650px) { 
     .intro, .projects {
         padding: 40px;
     }
 }
-
