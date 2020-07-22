@@ -1,6 +1,6 @@
 /**
  * @license
- * MyFonts Webfont Build ID 3927711, 2020-07-20T20:18:54-0400
+ * MyFonts Webfont Build ID 3928110, 2020-07-22T00:21:45-0400
  * 
  * The fonts listed in this notice are subject to the End User License
  * Agreement(s) entered into by the website owner. All other parties are 
@@ -8,29 +8,11 @@
  * 
  * You may obtain a valid license at the URLs below.
  * 
- * Webfont: Recoleta-RegularDEMO by Latinotype
- * URL: https://www.myfonts.com/fonts/latinotype/recoleta/regular-demo/
- * 
- * Webfont: Recoleta-Black by Latinotype
- * URL: https://www.myfonts.com/fonts/latinotype/recoleta/black/
- * 
  * Webfont: Recoleta-Bold by Latinotype
  * URL: https://www.myfonts.com/fonts/latinotype/recoleta/bold/
  * 
- * Webfont: Recoleta-Medium by Latinotype
- * URL: https://www.myfonts.com/fonts/latinotype/recoleta/medium/
- * 
- * Webfont: Recoleta-Thin by Latinotype
- * URL: https://www.myfonts.com/fonts/latinotype/recoleta/thin/
- * 
- * Webfont: Recoleta-Light by Latinotype
- * URL: https://www.myfonts.com/fonts/latinotype/recoleta/light/
- * 
  * Webfont: Recoleta-Regular by Latinotype
  * URL: https://www.myfonts.com/fonts/latinotype/recoleta/regular/
- * 
- * Webfont: Recoleta-SemiBold by Latinotype
- * URL: https://www.myfonts.com/fonts/latinotype/recoleta/sem-ibold/
  * 
  * 
  * Webfonts copyright: Copyright &amp;#x00A9; 2018 by Jorge Cisterna. All rights reserved.
@@ -40,13 +22,13 @@
 
 
 /* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/3bee9f");
+@import url("//hello.myfonts.net/count/3bf02e");
   
-@font-face {
-  font-family: 'Recoleta-Bold';
-  src: url('webfonts/Recoleta-Bold/font.woff2') format('woff2'), url('webfonts/Recoleta-Bold/font.woff') format('woff');
-}
 @font-face {
   font-family: 'Recoleta-Regular';
   src: url('webfonts/Recoleta-Regular/font.woff2') format('woff2'), url('webfonts/Recoleta-Regular/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Recoleta-Bold';
+  src: url('webfonts/Recoleta-Bold/font.woff2') format('woff2'), url('webfonts/Recoleta-Bold/font.woff') format('woff');
 }
