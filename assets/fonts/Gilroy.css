@@ -1,6 +1,6 @@
 /**
  * @license
- * MyFonts Webfont Build ID 3794596, 2019-08-07T13:01:51-0400
+ * MyFonts Webfont Build ID 3928113, 2020-07-22T00:27:07-0400
  * 
  * The fonts listed in this notice are subject to the End User License
  * Agreement(s) entered into by the website owner. All other parties are 
@@ -10,40 +10,35 @@
  * 
  * Webfont: Gilroy-Regular by Radomir Tinkov
  * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/regular/
- * Copyright: Copyright &#x00A9; 2016 by Radomir Tinkov. All rights reserved.
+ * Copyright: Copyright &amp;#x00A9; 2016 by Radomir Tinkov. All rights reserved.
  * 
  * Webfont: Gilroy-RegularItalic by Radomir Tinkov
  * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/regular-italic/
- * Copyright: Copyright &#x00A9; 2015 by Radomir Tinkov. All rights reserved.
- * 
- * Webfont: Gilroy-Light by Radomir Tinkov
- * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/light/
- * Copyright: Copyright &#x00A9; 2016 by Radomir Tinkov. All rights reserved.
+ * Copyright: Copyright &amp;#x00A9; 2015 by Radomir Tinkov. All rights reserved.
  * 
  * Webfont: Gilroy-ExtraBold by Radomir Tinkov
  * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/extra-bold/
- * Copyright: Copyright &#x00A9; 2016 by Radomir Tinkov. All rights reserved.
+ * Copyright: Copyright &amp;#x00A9; 2016 by Radomir Tinkov. All rights reserved.
  * 
  * 
- * License: https://www.myfonts.com/viewlicense?type=web&buildid=3794596
- * Licensed pageviews: 10,000
  * 
- * © 2019 MyFonts Inc
+ * © 2020 MyFonts Inc
 */
 
 
 /* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/39e6a4");
+@import url("//hello.myfonts.net/count/3bf031");
+  
+@font-face {
+  font-family: 'Gilroy-Regular';
+  src: url('webfonts/Gilroy-Regular/font.woff2') format('woff2'), url('webfonts/Gilroy-Regular/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Gilroy-RegularItalic';
+  src: url('webfonts/Gilroy-RegularItalic/font.woff2') format('woff2'), url('webfonts/Gilroy-RegularItalic/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Gilroy-ExtraBold';
+  src: url('webfonts/Gilroy-ExtraBold/font.woff2') format('woff2'), url('webfonts/Gilroy-ExtraBold/font.woff') format('woff');
+}
 
-  
-@font-face {font-family: 'Gilroy-Regular';src: url('webfonts/Gilroy/39E6A4_0_0.eot');src: url('webfonts/Gilroy/39E6A4_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/Gilroy/39E6A4_0_0.woff2') format('woff2'),url('webfonts/Gilroy/39E6A4_0_0.woff') format('woff'),url('webfonts/Gilroy/39E6A4_0_0.ttf') format('truetype');}
- 
-  
-@font-face {font-family: 'Gilroy-RegularItalic';src: url('webfonts/Gilroy/39E6A4_1_0.eot');src: url('webfonts/Gilroy/39E6A4_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/Gilroy/39E6A4_1_0.woff2') format('woff2'),url('webfonts/Gilroy/39E6A4_1_0.woff') format('woff'),url('webfonts/Gilroy/39E6A4_1_0.ttf') format('truetype');}
- 
-  
-@font-face {font-family: 'Gilroy-Light';src: url('webfonts/Gilroy/39E6A4_2_0.eot');src: url('webfonts/Gilroy/39E6A4_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/Gilroy/39E6A4_2_0.woff2') format('woff2'),url('webfonts/Gilroy/39E6A4_2_0.woff') format('woff'),url('webfonts/Gilroy/39E6A4_2_0.ttf') format('truetype');}
- 
-  
-@font-face {font-family: 'Gilroy-ExtraBold';src: url('webfonts/Gilroy/39E6A4_3_0.eot');src: url('webfonts/Gilroy/39E6A4_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/Gilroy/39E6A4_3_0.woff2') format('woff2'),url('webfonts/Gilroy/39E6A4_3_0.woff') format('woff'),url('webfonts/Gilroy/39E6A4_3_0.ttf') format('truetype');}
- 
