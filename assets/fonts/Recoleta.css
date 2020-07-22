@@ -26,9 +26,9 @@
   
 @font-face {
   font-family: 'Recoleta-Regular';
-  src: url('webfonts/Recoleta-Regular/font.woff2') format('woff2'), url('webfonts/Recoleta-Regular/font.woff') format('woff');
+  src: url('/webfonts/Recoleta-Regular/font.woff2') format('woff2'), url('/webfonts/Recoleta-Regular/font.woff') format('woff');
 }
 @font-face {
   font-family: 'Recoleta-Bold';
-  src: url('webfonts/Recoleta-Bold/font.woff2') format('woff2'), url('webfonts/Recoleta-Bold/font.woff') format('woff');
+  src: url('/webfonts/Recoleta-Bold/font.woff2') format('woff2'), url('/webfonts/Recoleta-Bold/font.woff') format('woff');
 }

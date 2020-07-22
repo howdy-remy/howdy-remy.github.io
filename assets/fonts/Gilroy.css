@@ -31,14 +31,14 @@
   
 @font-face {
   font-family: 'Gilroy-Regular';
-  src: url('webfonts/Gilroy-Regular/font.woff2') format('woff2'), url('webfonts/Gilroy-Regular/font.woff') format('woff');
+  src: url('/webfonts/Gilroy-Regular/font.woff2') format('woff2'), url('/webfonts/Gilroy-Regular/font.woff') format('woff');
 }
 @font-face {
   font-family: 'Gilroy-RegularItalic';
-  src: url('webfonts/Gilroy-RegularItalic/font.woff2') format('woff2'), url('webfonts/Gilroy-RegularItalic/font.woff') format('woff');
+  src: url('/webfonts/Gilroy-RegularItalic/font.woff2') format('woff2'), url('/webfonts/Gilroy-RegularItalic/font.woff') format('woff');
 }
 @font-face {
   font-family: 'Gilroy-ExtraBold';
-  src: url('webfonts/Gilroy-ExtraBold/font.woff2') format('woff2'), url('webfonts/Gilroy-ExtraBold/font.woff') format('woff');
+  src: url('/webfonts/Gilroy-ExtraBold/font.woff2') format('woff2'), url('/webfonts/Gilroy-ExtraBold/font.woff') format('woff');
 }
 
