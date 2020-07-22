@@ -44,34 +44,9 @@
   
 @font-face {
   font-family: 'Recoleta-Bold';
-  src: url('webFonts/Recoleta-Bold/font.woff2') format('woff2'), url('webFonts/Recoleta-Bold/font.woff') format('woff');
-}
-@font-face {
-  font-family: 'Recoleta-Medium';
-  src: url('webFonts/Recoleta-Medium/font.woff2') format('woff2'), url('webFonts/Recoleta-Medium/font.woff') format('woff');
-}
-@font-face {
-  font-family: 'Recoleta-Thin';
-  src: url('webFonts/Recoleta-Thin/font.woff2') format('woff2'), url('webFonts/Recoleta-Thin/font.woff') format('woff');
-}
-@font-face {
-  font-family: 'Recoleta-RegularDEMO';
-  src: url('webFonts/Recoleta-RegularDEMO/font.woff2') format('woff2'), url('webFonts/Recoleta-RegularDEMO/font.woff') format('woff');
-}
-@font-face {
-  font-family: 'Recoleta-SemiBold';
-  src: url('webFonts/Recoleta-SemiBold/font.woff2') format('woff2'), url('webFonts/Recoleta-SemiBold/font.woff') format('woff');
+  src: url('webfonts/Recoleta-Bold/font.woff2') format('woff2'), url('webfonts/Recoleta-Bold/font.woff') format('woff');
 }
 @font-face {
   font-family: 'Recoleta-Regular';
-  src: url('webFonts/Recoleta-Regular/font.woff2') format('woff2'), url('webFonts/Recoleta-Regular/font.woff') format('woff');
+  src: url('webfonts/Recoleta-Regular/font.woff2') format('woff2'), url('webfonts/Recoleta-Regular/font.woff') format('woff');
 }
-@font-face {
-  font-family: 'Recoleta-Light';
-  src: url('webFonts/Recoleta-Light/font.woff2') format('woff2'), url('webFonts/Recoleta-Light/font.woff') format('woff');
-}
-@font-face {
-  font-family: 'Recoleta-Black';
-  src: url('webFonts/Recoleta-Black/font.woff2') format('woff2'), url('webFonts/Recoleta-Black/font.woff') format('woff');
-}
-
