@@ -1,0 +1,77 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3927711, 2020-07-20T20:18:54-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Recoleta-RegularDEMO by Latinotype
+ * URL: https://www.myfonts.com/fonts/latinotype/recoleta/regular-demo/
+ * 
+ * Webfont: Recoleta-Black by Latinotype
+ * URL: https://www.myfonts.com/fonts/latinotype/recoleta/black/
+ * 
+ * Webfont: Recoleta-Bold by Latinotype
+ * URL: https://www.myfonts.com/fonts/latinotype/recoleta/bold/
+ * 
+ * Webfont: Recoleta-Medium by Latinotype
+ * URL: https://www.myfonts.com/fonts/latinotype/recoleta/medium/
+ * 
+ * Webfont: Recoleta-Thin by Latinotype
+ * URL: https://www.myfonts.com/fonts/latinotype/recoleta/thin/
+ * 
+ * Webfont: Recoleta-Light by Latinotype
+ * URL: https://www.myfonts.com/fonts/latinotype/recoleta/light/
+ * 
+ * Webfont: Recoleta-Regular by Latinotype
+ * URL: https://www.myfonts.com/fonts/latinotype/recoleta/regular/
+ * 
+ * Webfont: Recoleta-SemiBold by Latinotype
+ * URL: https://www.myfonts.com/fonts/latinotype/recoleta/sem-ibold/
+ * 
+ * 
+ * Webfonts copyright: Copyright &amp;#x00A9; 2018 by Jorge Cisterna. All rights reserved.
+ * 
+ * © 2020 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3bee9f");
+  
+@font-face {
+  font-family: 'Recoleta-Bold';
+  src: url('webFonts/Recoleta-Bold/font.woff2') format('woff2'), url('webFonts/Recoleta-Bold/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Recoleta-Medium';
+  src: url('webFonts/Recoleta-Medium/font.woff2') format('woff2'), url('webFonts/Recoleta-Medium/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Recoleta-Thin';
+  src: url('webFonts/Recoleta-Thin/font.woff2') format('woff2'), url('webFonts/Recoleta-Thin/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Recoleta-RegularDEMO';
+  src: url('webFonts/Recoleta-RegularDEMO/font.woff2') format('woff2'), url('webFonts/Recoleta-RegularDEMO/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Recoleta-SemiBold';
+  src: url('webFonts/Recoleta-SemiBold/font.woff2') format('woff2'), url('webFonts/Recoleta-SemiBold/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Recoleta-Regular';
+  src: url('webFonts/Recoleta-Regular/font.woff2') format('woff2'), url('webFonts/Recoleta-Regular/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Recoleta-Light';
+  src: url('webFonts/Recoleta-Light/font.woff2') format('woff2'), url('webFonts/Recoleta-Light/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Recoleta-Black';
+  src: url('webFonts/Recoleta-Black/font.woff2') format('woff2'), url('webFonts/Recoleta-Black/font.woff') format('woff');
+}
+
