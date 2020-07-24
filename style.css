@@ -76,7 +76,7 @@ h2 > a {
 /* grid ----------------------------------------------------------------------*/
 section {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   grid-gap: 24px;
   padding: 100px;
   padding: 72px 100px;
@@ -85,8 +85,22 @@ section.projects {
   background-color: var(--accent-wall);
 }
 
-.colspan--2 {
+.one-third {
   grid-column: span 2;
+}
+.half {
+  grid-column: span 3;
+}
+.two-thirds {
+  grid-column: span 4;
+}
+.full {
+  grid-column: span 6;
+}
+.full-bleed {
+  grid-column: span 6;
+  width: calc(100% + 200px);
+  margin-left: -100px;
 }
 
 @media (max-width: 880px) { 
@@ -152,7 +166,7 @@ section.projects {
 
 /* skip a cell */
 .project:first-of-type {
-  grid-column: 1;
+  grid-column: 1 / span 2;
 }
 
 /* project -------------------------------------------------------------------*/
@@ -160,6 +174,7 @@ section.projects {
   padding: 18px 0;
   border-top: 6px solid;
   transition: all .25s;
+  grid-column: span 2;
 }
 
 .project__fade-out {
@@ -248,22 +263,10 @@ article.opener {
   position: relative;
   bottom: -72px;
   z-index: 5;
-  grid-column: 3;
-  width: 300px;
+  grid-column: 5 / span 2;
   border-radius: 5px;
+  height: fit-content;
 }
-
-/*article.opener::after {
-  content: '';
-  display: block;
-  height: calc(100% + 12px);
-  width: calc(100% + 12px);
-  border: 2px solid var(--primary);
-  border-radius: 24px;
-  position: absolute;
-  top: -6px;
-  left: -6px;
-}*/
 
 article.detail {
   padding: 24px 20px 10px 20px;
@@ -272,46 +275,9 @@ article.detail {
   height: fit-content;
 }
 
-img[class^="project__image"] {
+img {
   width: 100%;
 }
-.project__image--two-thirds {
-  grid-column: span 2;
-}
-
-.project__image--full {
-  grid-column: span 3;
-}
-
-img.project__image--full-bleed {
-  width: calc(100% + 200px);
-  margin-left: -100px;
-  grid-column: span 3;
-}
-
-/*.back {
-    display: block;
-    margin: -9px 0 18px 0;
-    padding-bottom: 9px;
-	font-family: 'Montserrat', sans-serif;
-    border-bottom: 1px solid var(--primary);
-
-    font-size: 10px;
-    font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-    color: var(--secondary);
-
-    cursor: pointer;
-}
-
-.back--end {
-    border-top: 1px solid var(--primary);
-    border-bottom: 1px solid var(--primary);
-    margin: 36px;
-    padding-top: 9px;
-    width: calc(33% - 72px);
-}*/
 
 /* say hi -------------------------------------------------------------------*/
 footer {
