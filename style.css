@@ -76,10 +76,12 @@ h2 > a {
 /* grid ----------------------------------------------------------------------*/
 section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 24px;
   padding: 100px;
   padding: 72px 100px;
+}
+section.projects {  
   background-color: var(--accent-wall);
 }
 
@@ -227,45 +229,67 @@ section {
 
 
 /* PROJECT DETAIL ------------------------------------------------------------*/
-.project-detail {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+.project--hero {
+  width: 100vw;
+  height: 90vh;
+  position: relative;
 }
 
-.project-detail > .project {
-    margin: 36px;
-    width: calc(33% - 72px);
+.project--hero > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
 }
 
-.project__image--two-thirds-inset{
-    margin: 60px;
-    width: calc(66% - 120px);
+article.opener {
+  background-color: white;
+  padding: 24px 20px 10px 20px;
+  position: relative;
+  bottom: -72px;
+  z-index: 5;
+  grid-column: 3;
+  width: 300px;
+  border-radius: 5px;
+}
+
+/*article.opener::after {
+  content: '';
+  display: block;
+  height: calc(100% + 12px);
+  width: calc(100% + 12px);
+  border: 2px solid var(--primary);
+  border-radius: 24px;
+  position: absolute;
+  top: -6px;
+  left: -6px;
+}*/
+
+article.detail {
+  padding: 24px 20px 10px 20px;
+  background-color: black;
+  color: white;
+  height: fit-content;
+}
+
+img[class^="project__image"] {
+  width: 100%;
+}
+.project__image--two-thirds {
+  grid-column: span 2;
 }
 
 .project__image--full {
-    width: 100%;
+  grid-column: span 3;
 }
 
-.project__image--full-inset {
-    width: calc(100% - 120px);
-    max-height: 100vh;
-    margin: 60px;
-    object-fit: cover;
+img.project__image--full-bleed {
+  width: calc(100% + 200px);
+  margin-left: -100px;
+  grid-column: span 3;
 }
 
-.project__image--short {
-    height: 50vw;
-    object-fit: cover;
-    object-position: 0 0;
-}
-
-.project__image--two-thirds {
-    width: 66%;
-    flex-grow: 1;
-}
-
-.back {
+/*.back {
     display: block;
     margin: -9px 0 18px 0;
     padding-bottom: 9px;
@@ -287,7 +311,7 @@ section {
     margin: 36px;
     padding-top: 9px;
     width: calc(33% - 72px);
-}
+}*/
 
 /* say hi -------------------------------------------------------------------*/
 footer {
@@ -321,4 +345,24 @@ footer {
 
 .say-hi__icon + .say-hi__icon {
   margin-left: 15px;
+}
+
+
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+
+  height: 36px;
+  width: 175px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 2px solid var(--primary);
+
+  color: var(--primary);
+  backdrop-filter: blur(2px);
+  background-color: rgba(255,255,255,.25);
 }
