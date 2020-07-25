@@ -113,13 +113,19 @@ section {
 }
 
 @media (max-width: 720px) { 
+  section {
+    padding: 50px 72px;
+  }
   .two-thirds {
     grid-column: span 6;
   }
 }
 
 @media (max-width: 650px) { 
-  .one-third {
+  section {
+    padding: 30px 40px;
+  }
+  .one-third, .half {
     grid-column: span 6;
   }
 }
@@ -136,6 +142,12 @@ section {
 
 .intro > div {
   padding-top: 100px;
+}
+
+@media (max-width: 650px) { 
+  .intro > div {
+    padding-top: 50px;
+  }
 }
 
 .intro p {
@@ -173,6 +185,11 @@ section {
   margin-bottom: 72px;
 }
 
+@media (max-width: 650px) { 
+  .projects > header {
+    margin-bottom: 30px;
+  }
+}
 /* start projects on a new row */
 .project:first-of-type {
   grid-column: 1 / span 2;
@@ -308,6 +325,7 @@ img {
   position: fixed;
   top: 10px;
   left: 10px;
+  z-index: 10;
 
   height: 36px;
   width: 175px;
@@ -333,9 +351,9 @@ img {
   article.opener {
     grid-column: span 6;
     position: static;
+    margin-top: 30px;
   }
 }
-
 
 /* say hi -------------------------------------------------------------------*/
 footer {
@@ -369,4 +387,16 @@ footer {
 
 .say-hi__icon + .say-hi__icon {
   margin-left: 15px;
+}
+
+@media (max-width: 720px) { 
+  footer {
+    padding: 15px 72px;
+  }
+}
+
+@media (max-width: 650px) { 
+  footer {
+    padding: 15px 40px;
+  }
 }

@@ -3,7 +3,7 @@ $(function() {
     $('#front-end').click( () =>
         $('#intro__deets').replaceWith(
             `<p id='intro__deets'>
-            I’m the Software Engineering Manager for the front-end team at Tracer, a marketing data aggregation and analytics platform. Previously I’ve been at home in creative agencies building client websites and internal tools. Currently I’m working on converting an Ember/Coffeescript application to React, Redux, and Storybook.
+                I’m the Software Engineering Manager for the front-end team at Tracer, a marketing data aggregation and analytics platform. I get jazzed by design systems and pattern libraries, and delivering tools and processes focused on the transition from idea to design to code. Currently, I’m working on converting an Ember/Coffeescript application to React, Redux, and Storybook.
             </p>`     
         ));
     $('#design').click( () =>
@@ -15,7 +15,9 @@ $(function() {
     $('#awesome').click( () =>
         $('#intro__deets').replaceWith(
             `<p id='intro__deets'>
-            In 2015 my husband and I converted a 1999 ford econoline e350 into a campervan. We took off in August and spent three months living and working in the van as we drove 13000 miles around the country.
+            Last year I backpacked over 150 miles including the Grand Canyon Rim to Rim to Rim&mdash;around 50 miles, 21,000 feet in elevation change, over 6 days.
+            <br/><br/>
+            In 2015 my husband and I converted a 1999 ford econoline e350 into a campervan. We took off in August and spent three months living and working in the van as we drove 13,000 miles around the country.
             </p>`    
         ));
     $('.project').hover( 
