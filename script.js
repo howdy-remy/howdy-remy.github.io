@@ -9,7 +9,7 @@ $(function() {
     $('#design').click( () =>
         $('#intro__deets').replaceWith(
             `<p id='intro__deets'>
-            Before diving into full time web development I was a senior designer and front-end developer at Visual Dialogue, a small agency working on big projects. Over five years I worked on a couple dozen brands doing a variety of projects including branding, books, magazines, music packaging, web sites, ecommerce platforms, advertising, you name it.
+            Before diving into full time web development I was a senior designer and front-end developer at Visual Dialogue, a small agency working on big projects. Over five years I worked with a couple dozen clients doing a variety of projects including brand systems, books, magazines, music packaging, web sites, ecommerce platforms, advertising, you name it.
             </p>`    
         ));
     $('#awesome').click( () =>
