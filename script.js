@@ -3,7 +3,7 @@ $(function() {
     $('#front-end').click( () =>
         $('#intro__deets').replaceWith(
             `<p id='intro__deets'>
-                        I recently wrapped up as an Senior Engineer at Ro, a telehealth company, where I worked on projects from member retention to being the only frontend engineer on the launch of their Mental Health offering, Ro Mind. Before that I was the Software Engineering Manager for the front-end team at Tracer, a marketing data aggregation and analytics platform, where I led their Ember-to-React conversion. I get jazzed by design systems and pattern libraries, and delivering tools and processes focused on the transition from idea to design to code.
+                        I recently wrapped up as a Senior Engineer at Ro, a telehealth company, where I worked on projects from member retention to being the only frontend engineer on the launch of their Mental Health offering, Ro Mind. Before that I was the Software Engineering Manager for the front-end team at Tracer, a marketing data aggregation and analytics platform, where I led their Ember-to-React conversion. I get jazzed by design systems and pattern libraries, and delivering tools and processes focused on the transition from idea to design to code.
             </p>`     
         ));
     $('#design').click( () =>
