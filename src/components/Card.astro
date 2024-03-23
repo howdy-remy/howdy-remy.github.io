@@ -5,9 +5,10 @@ interface Props {
   tag?: string;
   href: string;
   linkText: string;
+  targetSelf?: boolean;
 }
 
-const { href, title, tag, credit, linkText } = Astro.props;
+const { href, title, tag, credit, linkText, targetSelf } = Astro.props;
 ---
 
 <div class="project one-third">
@@ -17,7 +18,11 @@ const { href, title, tag, credit, linkText } = Astro.props;
   </p>
   <p class="project__credit">{credit}</p>
   <p class="small-text project__tags">{tag}</p>
-  <a class="small-text project__link" href={href} target="_blank">
+  <a
+    class="small-text project__link"
+    href={href}
+    target={targetSelf ? "_self" : "_blank"}
+  >
     {linkText} &rarr;
   </a>
 </div>

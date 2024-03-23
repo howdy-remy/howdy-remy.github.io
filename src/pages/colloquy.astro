@@ -1,21 +1,31 @@
 ---
-import ProjectText from "../components/ProjectText.astro";
+import BackButton from "../components/BackButton.astro";
 import Layout from "../layouts/Layout.astro";
-import ProjectDetail from "../layouts/ProjectDetail.astro";
+import ProjectHero from "../components/ProjectHero.astro";
+import ProjectImage from "../components/ProjectImage.astro";
+import ProjectText from "../components/ProjectText.astro";
 ---
 
 <Layout title="Colloquy | Remy Lynch — Frontend Engineer">
-  <ProjectDetail
+  <ProjectHero
     title="Colloquy"
-    description="In 2012, Colloquy, the Harvard Graduate School of Arts and Sciences’ Alumni magazine came to Visual Dialogue for a much needed redesign. I contributed to the initial update to the look and feel, typography, layout, and organization. After completing the redesign I worked on visual concepts, typographic treatments, typesetting and preparing files for print for 12 issues."
     credit="Harvard Graduate School of Arts and Sciences — created at Visual Dialogue"
     tag="design"
     heroAlt="eleven issues of Colloquy stacked and fanned out"
     heroSrc="colloquy/colloquy_01.jpg"
   >
-    <img
+    In 2012, Colloquy, the Harvard Graduate School of Arts and Sciences’ Alumni
+    magazine came to Visual Dialogue for a much needed redesign. I contributed
+    to the initial update to the look and feel, typography, layout, and
+    organization. After completing the redesign I worked on visual concepts,
+    typographic treatments, typesetting and preparing files for print for 12
+    issues."
+  </ProjectHero>
+
+  <section>
+    <ProjectImage
       src="colloquy/colloquy_02.jpg"
-      class="two-thirds"
+      classes="two-thirds"
       alt="close up of table of contents design"
     />
 
@@ -25,9 +35,9 @@ import ProjectDetail from "../layouts/ProjectDetail.astro";
       set the tone for the rest of the issue.
     </ProjectText>
 
-    <img
+    <ProjectImage
       src="colloquy/colloquy_05.jpg"
-      class="full"
+      classes="full"
       alt="close up of table of contents design"
     />
 
@@ -37,22 +47,17 @@ import ProjectDetail from "../layouts/ProjectDetail.astro";
       it from the usual alumni magazine look and feel.
     </ProjectText>
 
-    <img
+    <ProjectImage
       src="colloquy/colloquy_04.jpg"
-      class="two-thirds"
+      classes="two-thirds"
       alt="close up of illustration in q&a section"
     />
 
-    <img
+    <ProjectImage
       src="colloquy/colloquy_06.jpg"
-      class="full"
+      classes="full"
       alt="close up showing typographic treatment for article title"
     />
-  </ProjectDetail>
+  </section>
+  <BackButton />
 </Layout>
-<style>
-  img {
-    width: 100%;
-    box-shadow: 0 0 30px rgba(10, 10, 10, 0.1);
-  }
-</style>
