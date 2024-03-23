@@ -1,0 +1,75 @@
+---
+interface Props {
+  title: string;
+  credit: string;
+  tag: string;
+  heroSrc: string;
+  heroAlt: string;
+}
+
+const { title, credit, tag, heroAlt, heroSrc } = Astro.props;
+---
+
+<section class="project--hero">
+  <article class="opener one-third">
+    <h3>{title}</h3>
+    <slot />
+    <p class="project__credit">{credit}</p>
+    <p class="small-text project__tags">{tag}</p>
+  </article>
+  <img src={heroSrc} class="project__image--hero" alt={heroAlt} />
+</section>
+<style>
+  .project--hero {
+    width: 100vw;
+    min-height: 90vh;
+    position: relative;
+  }
+
+  .project--hero > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+
+  .project__credit {
+    display: block;
+    padding-top: 6px;
+    border-top: 1px solid;
+    font-family: var(--serif--regular);
+    font-size: 12px;
+  }
+
+  .project__tags {
+    color: inherit;
+  }
+
+  article.opener {
+    position: relative;
+    z-index: 5;
+    grid-column: 5 / span 2;
+    height: fit-content;
+    padding: 24px 20px 10px 20px;
+    border-radius: 5px;
+    background-color: white;
+  }
+
+  @media (max-width: 880px) {
+    article.opener {
+      grid-column: 3 / span 4;
+      position: static;
+    }
+    img.one-third,
+    img.two-thirds {
+      grid-column: span 6;
+    }
+  }
+  @media (max-width: 720px) {
+    article.opener {
+      grid-column: span 6;
+      position: static;
+      margin-top: 30px;
+    }
+  }
+</style>

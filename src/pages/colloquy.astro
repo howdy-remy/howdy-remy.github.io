@@ -1,0 +1,63 @@
+---
+import BackButton from "../components/BackButton.astro";
+import Layout from "../layouts/Layout.astro";
+import ProjectHero from "../components/ProjectHero.astro";
+import ProjectImage from "../components/ProjectImage.astro";
+import ProjectText from "../components/ProjectText.astro";
+---
+
+<Layout title="Colloquy | Remy Lynch — Frontend Engineer">
+  <ProjectHero
+    title="Colloquy"
+    credit="Harvard Graduate School of Arts and Sciences — created at Visual Dialogue"
+    tag="design"
+    heroAlt="eleven issues of Colloquy stacked and fanned out"
+    heroSrc="colloquy/colloquy_01.jpg"
+  >
+    In 2012, Colloquy, the Harvard Graduate School of Arts and Sciences’ Alumni
+    magazine came to Visual Dialogue for a much needed redesign. I contributed
+    to the initial update to the look and feel, typography, layout, and
+    organization. After completing the redesign I worked on visual concepts,
+    typographic treatments, typesetting and preparing files for print for 12
+    issues."
+  </ProjectHero>
+
+  <section>
+    <ProjectImage
+      src="colloquy/colloquy_02.jpg"
+      classes="two-thirds"
+      alt="close up of table of contents design"
+    />
+
+    <ProjectText>
+      We chose our favorite outtakes from a photoshoot, or an unexpected find
+      from the photo archive, to place front and center on the first spread to
+      set the tone for the rest of the issue.
+    </ProjectText>
+
+    <ProjectImage
+      src="colloquy/colloquy_05.jpg"
+      classes="full"
+      alt="close up of table of contents design"
+    />
+
+    <ProjectText>
+      An emphasis on including good photography, popular illustrators, and
+      thoughtful type lockups was key to elevating <i>Colloquy’s</i> design and distance
+      it from the usual alumni magazine look and feel.
+    </ProjectText>
+
+    <ProjectImage
+      src="colloquy/colloquy_04.jpg"
+      classes="two-thirds"
+      alt="close up of illustration in q&a section"
+    />
+
+    <ProjectImage
+      src="colloquy/colloquy_06.jpg"
+      classes="full"
+      alt="close up showing typographic treatment for article title"
+    />
+  </section>
+  <BackButton />
+</Layout>

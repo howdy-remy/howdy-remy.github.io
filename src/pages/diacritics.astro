@@ -1,0 +1,58 @@
+---
+import BackButton from "../components/BackButton.astro";
+import Layout from "../layouts/Layout.astro";
+import ProjectHero from "../components/ProjectHero.astro";
+import ProjectImage from "../components/ProjectImage.astro";
+import ProjectText from "../components/ProjectText.astro";
+---
+
+<Layout title="Diacritics | Remy Lynch — Frontend Engineer">
+  <ProjectHero
+    title="Diacritics"
+    credit="Cornell University — created with Rick Rawlins/co"
+    tag="design"
+    heroAlt="cover of Diacritics vol 42.4"
+    heroSrc="diacritics/diacritics_02.jpg"
+  >
+    Upon reaching its 40th year of publication, <i>Diacritics</i>, a quarterly
+    “review of contemporary criticism” by Cornell University, felt they needed a
+    more contemporary design. As they say “style is cyclical”, so we dusted off
+    the incredible logotype from the very first issue in 1971 and paired it with
+    type from Hoefler & Co. and a clean, modern layout that is as bold as the
+    essays in each issue. Following the initial redesign, I typeset and produced
+    print-ready files for 13 issues.
+  </ProjectHero>
+  <section>
+    <ProjectImage
+      src="diacritics/diacritics_03.jpg"
+      classes="half"
+      alt="close up of Diacritics showing design of table of contents"
+    />
+    <ProjectImage
+      src="diacritics/diacritics_04.jpg"
+      classes="half"
+      alt="close up of Diacritics showing title typography"
+    />
+    <ProjectImage
+      src="diacritics/diacritics_05.jpg"
+      classes="two-thirds"
+      alt="close up of Diacritics showing pullquote design"
+    />
+
+    <ProjectText>
+      Even though in the early days of <i>Diacritics</i> they were very forward thinking
+      and flexible with their design it was almost scandalous to suggest that we
+      add pull quotes to an academic journal. I’m glad we got away with it because
+      they’re a crucial part of the redesign. They help with scanning the dense material,
+      emphasizing important concepts, and break up the monotony of the solid blocks
+      of text on the page.
+    </ProjectText>
+
+    <ProjectImage
+      src="diacritics/diacritics_06.jpg"
+      classes="full"
+      alt="two thirds spread of colorful art image"
+    />
+  </section>
+  <BackButton />
+</Layout>

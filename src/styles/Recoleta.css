@@ -20,15 +20,16 @@
  * © 2020 MyFonts Inc
 */
 
-
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/3bf02e");
-  
+
 @font-face {
-  font-family: 'Recoleta-Regular';
-  src: url('./fonts/Recoleta-Regular/font.woff2') format('woff2'), url('./fonts/Recoleta-Regular/font.woff') format('woff');
+  font-family: "Recoleta-Regular";
+  src: url("./fonts/Recoleta-Regular/font.woff2") format("woff2"),
+    url("./fonts/Recoleta-Regular/font.woff") format("woff");
 }
 @font-face {
-  font-family: 'Recoleta-Bold';
-  src: url('./fonts/Recoleta-Bold/font.woff2') format('woff2'), url('./fonts/Recoleta-Bold/font.woff') format('woff');
+  font-family: "Recoleta-Bold";
+  src: url("./fonts/Recoleta-Bold/font.woff2") format("woff2"),
+    url("./fonts/Recoleta-Bold/font.woff") format("woff");
 }

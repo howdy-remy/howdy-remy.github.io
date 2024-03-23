@@ -1,0 +1,111 @@
+---
+import BackButton from "../components/BackButton.astro";
+import Layout from "../layouts/Layout.astro";
+import ProjectHero from "../components/ProjectHero.astro";
+import ProjectImage from "../components/ProjectImage.astro";
+import ProjectText from "../components/ProjectText.astro";
+---
+
+<Layout title="Woody at 100 & Lead Belly | Remy Lynch — Frontend Engineer">
+  <ProjectHero
+    title="Woody at 100 & Lead Belly"
+    credit="Smithsonian Folkways — created at Visual Dialogue"
+    tag="design"
+    heroAlt='"Woody at 100" and "Lead Belly" books stacked showing spines'
+    heroSrc="woody-at-100-lead-belly/smithsonian_01.jpg"
+  >
+    Two large format, special edition collections for Smithsonian Folkways
+    Recordings. <i>Woody at 100: The Woody Guthrie Centennial Collection</i> commemorates
+    Woody’s 100th birthday with a 150-page, 12x12 book which includes essays about
+    his life, photos, his drawings, and 57 tracks on 3 CDs. <i
+      >Lead Belly: The Smithsonian Folkways Collection</i
+    > was released two years later in the same format and focuses on the life and
+    music of Huddie Ledbetter.
+  </ProjectHero>
+
+  <section>
+    <ProjectText>
+      We wanted the packaging to resemble the record covers of the era,
+      specifically those of other Folkways Records albums, and to stand out on
+      the shelves so we went for a 12" by 12" format with huge typography and a
+      life size (and never-before-seen) photo of Woody Guthrie’s face.
+      <br /><br />
+      Guthrie typed out the lyrics to all of his songs on his typewriter, sometimes
+      many variations on the same song. We grabbed a bunch of these from the archive
+      and layered them to create the texture along the edge of the cover, binding,
+      and a handful of interior pages.
+    </ProjectText>
+
+    <ProjectImage
+      src="woody-at-100-lead-belly/smithsonian_02.jpg"
+      classes="two-thirds"
+      alt='cover for "Woody at 100"'
+    />
+
+    <ProjectImage
+      src="woody-at-100-lead-belly/smithsonian_03.jpg"
+      classes="full"
+      alt="book spread showing full page photo of Woody Guthrie playing guitar to a crowd and title page for the book"
+    />
+
+    <ProjectImage
+      src="woody-at-100-lead-belly/smithsonian_04.jpg"
+      classes="one-third"
+      alt='page in book showing typewritten lyrics to "This Land is Your Land"'
+    />
+
+    <ProjectImage
+      src="woody-at-100-lead-belly/smithsonian_05.jpg"
+      classes="two-thirds"
+      alt="spread in book with track listings and cds in pockets"
+      style="grid-row: span 2; "
+    />
+
+    <ProjectText>
+      We were able to match up some of the typewritten lyrics with the listed
+      tracks on each page. We also made the CDs look like little records (cute),
+      brought back the lyric texture mentioned earlier and included Guthrie’s
+      doodles in the margins of the pages.
+    </ProjectText>
+
+    <ProjectImage
+      src="woody-at-100-lead-belly/smithsonian_06.jpg"
+      classes="two-thirds"
+      alt='cover to "Lead Belly"'
+    />
+
+    <ProjectText>
+      Following the success of <i>Woody at 100</i> we created the second installment
+      of the series, <i>Lead Belly: The Smithsonian Folkways Collection</i>. We
+      kept the format the same but tried to bring in some of Lead Belly’s vibe.
+      We went with a similar photo treatment on the cover and set the title in
+      some rough wood type.
+    </ProjectText>
+
+    <ProjectImage
+      src="woody-at-100-lead-belly/smithsonian_08.jpg"
+      classes="full"
+      alt="spread with full page photo of Lead Belly playing at a club"
+    />
+
+    <ProjectImage
+      src="woody-at-100-lead-belly/smithsonian_07.jpg"
+      classes="full"
+      alt='opening spread to "Lead Belly"'
+    />
+
+    <ProjectImage
+      src="woody-at-100-lead-belly/smithsonian_09.jpg"
+      classes="two-thirds"
+      alt="spread showing hand written note"
+    />
+
+    <ProjectText>
+      Notes and letters were mixed in with the essays to help give depth to his
+      personality and provide more context. The archival photos were pretty
+      amazing snapshots of the time so we made them as big as possible so they
+      wouldn’t lose their impact.
+    </ProjectText>
+  </section>
+  <BackButton />
+</Layout>
