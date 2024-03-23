@@ -1,0 +1,19 @@
+---
+interface Props {
+  src: string;
+  classes: string;
+  alt: string;
+  style?: string;
+}
+
+const { src, classes, alt, style } = Astro.props;
+---
+
+<img src={src} class={classes} alt={alt} style={style} />
+
+<style>
+  img {
+    width: 100%;
+    box-shadow: 0 0 30px rgba(10, 10, 10, 0.1);
+  }
+</style>
