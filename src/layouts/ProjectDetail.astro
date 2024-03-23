@@ -1,0 +1,110 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  credit: string;
+  tag: string;
+  heroSrc: string;
+  heroAlt: string;
+}
+
+const { title, description, credit, tag, heroAlt, heroSrc } = Astro.props;
+---
+
+<section class="project--hero">
+  <article class="opener one-third">
+    <h3>{title}</h3>
+    <p class="project__description">
+      {description}
+    </p>
+    <p class="project__credit">
+      {credit}
+    </p>
+    <p class="small-text project__tags">{tag}</p>
+  </article>
+  <img src={heroSrc} class="project__image--hero" alt={heroAlt} />
+</section>
+<section>
+  <slot />
+</section>
+<a class="back small-text" href="/">&larr; See more things!</a>\
+
+<style>
+  .project--hero {
+    width: 100vw;
+    min-height: 90vh;
+    position: relative;
+  }
+
+  .project--hero > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+  }
+
+  .project__credit {
+    display: block;
+    padding-top: 6px;
+    border-top: 1px solid;
+    font-family: var(--serif--regular);
+    font-size: 12px;
+  }
+
+  .project__tags {
+    color: inherit;
+  }
+
+  article.opener {
+    position: relative;
+    z-index: 5;
+    grid-column: 5 / span 2;
+    height: fit-content;
+    padding: 24px 20px 10px 20px;
+    border-radius: 5px;
+    background-color: white;
+  }
+
+  img {
+    width: 100%;
+    box-shadow: 0 0 30px rgba(10, 10, 10, 0.1);
+  }
+
+  .back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+
+    height: 36px;
+    width: 175px;
+    padding: 12px;
+    border-radius: 6px;
+    border: 2px solid var(--primary);
+
+    color: var(--primary);
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+
+  @media (max-width: 880px) {
+    article.opener {
+      grid-column: 3 / span 4;
+      position: static;
+    }
+    img.one-third,
+    img.two-thirds {
+      grid-column: span 6;
+    }
+  }
+  @media (max-width: 720px) {
+    article.opener {
+      grid-column: span 6;
+      position: static;
+      margin-top: 30px;
+    }
+  }
+</style>
