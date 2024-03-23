@@ -1,0 +1,54 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+import "../styles/Gilroy.css";
+import "../styles/Recoleta.css";
+import "../components/GlobalStyles.astro";
+import "../components/Typography.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  :root {
+    --primary: #181818;
+    --secondary: #6e9f57;
+    --secondary--active: #93b6ac;
+    --accent-wall: #dce5e5;
+
+    --sans--regular: "Gilroy-Regular", sans-serif;
+    --sans--bold: "Gilroy-ExtraBold", sans-serif;
+    --serif--regular: "Recoleta-Regular", serif;
+    --serif--bold: "Recoleta-Bold", serif;
+  }
+
+  *,
+  *:after,
+  *:before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    box-sizing: border-box;
+    font-family: var(--sans--regular);
+    color: var(--primary);
+  }
+</style>

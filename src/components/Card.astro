@@ -1,0 +1,96 @@
+---
+interface Props {
+  title: string;
+  credit: string;
+  tag?: string;
+  href: string;
+  linkText: string;
+}
+
+const { href, title, tag, credit, linkText } = Astro.props;
+---
+
+<div class="project one-third">
+  <h3>{title}</h3>
+  <p class="project__description">
+    <slot />
+  </p>
+  <p class="project__credit">{credit}</p>
+  <p class="small-text project__tags">{tag}</p>
+  <a class="small-text project__link" href={href} target="_blank">
+    {linkText} &rarr;
+  </a>
+</div>
+
+<style>
+  .project {
+    padding: 18px 0;
+    border-top: 6px solid;
+    transition: all 0.25s;
+  }
+  /* start projects on a new row */
+  .project:first-of-type {
+    grid-column: 1 / span 2;
+  }
+
+  @media (max-width: 880px) {
+    .project:first-of-type {
+      grid-column: 1 / span 3;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .project:first-of-type {
+      grid-column: 1 / span 6;
+    }
+  }
+
+  .project__fade-out {
+    opacity: 0.3;
+    transition: all 1s;
+  }
+
+  /* project text */
+  .project__description {
+    margin-bottom: 16px;
+    font-family: var(--serif--regular);
+  }
+
+  .project__credit {
+    display: block;
+    padding-top: 6px;
+    border-top: 1px solid;
+    font-family: var(--serif--regular);
+    font-size: 12px;
+  }
+
+  .project__tags {
+    color: inherit;
+  }
+
+  .project__link {
+    margin-bottom: 12px;
+    display: inline-block;
+  }
+
+  .project__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    display: inline-block;
+    width: 0;
+    height: 3px;
+    background-color: transparent;
+    transition: width 1s;
+  }
+
+  .project:hover > .project__link::after {
+    width: 100%;
+    background-color: var(--secondary);
+  }
+
+  .project > .project__link:hover::after {
+    background-color: var(--secondary--active);
+  }
+</style>
