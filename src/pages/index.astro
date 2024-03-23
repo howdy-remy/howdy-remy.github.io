@@ -1,35 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Intro from "../components/Intro.astro";
 import Card from "../components/Card.astro";
-import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-  <div class="wrapper wrapper--intro">
-    <section class="intro">
-      <h1 class="one-third">hi!</h1>
+<Layout title="Remy Lynch — Frontend Engineer">
+  <Intro />
 
-      <div class="two-thirds">
-        <h2>I’m Remy.</h2>
-        <h2>
-          I love being a <a id="front-end">front-end engineer</a>, in a past
-          life I was a <a id="design">print &amp; web designer</a>, and I’ve
-          done some <a id="awesome">pretty rad things</a>.
-        </h2>
-        <!-- <h2>I'm open to work!</h2> -->
-        <p id="intro__deets">
-          I love to work on design systems and pattern libraries, and delivering
-          tools and processes focused on the transition from idea to design to
-          code. I'm currently a Senior Engineer at Jeli by PagerDuty, an
-          incident managment and learning tool. I've worked on a variety of
-          products and team sizes, from operating as the only frontend engineer
-          on the launch of Ro's Mental Health offering, Ro Mind, to managing the
-          front-end team at Tracer, a marketing data aggregation and analytics
-          platform.
-        </p>
-      </div>
-    </section>
-  </div>
   <div class="wrapper wrapper--projects">
     <section class="projects">
       <header class="two-thirds">
@@ -39,18 +16,6 @@ import Footer from "../components/Footer.astro";
             >shoot me a message</a
           >.
         </h2>
-        <p class="small-text">
-          Oh, and these people thought this stuff was cool:
-        </p>
-        <p>
-          <i
-            >The Grammys, Communication Arts, Digiday, Creative Review, Ad Club
-            Hatch Awards, The UnderConsideration network, Dexigner, Packaging of
-            the World, Art of the Menu, Art Directors Club of NJ, New England
-            Book Show Award, Council of Editors of Learned Journals (CELJ),
-            &amp; more…</i
-          >
-        </p>
       </header>
 
       <Card
@@ -157,9 +122,22 @@ import Footer from "../components/Footer.astro";
         Once we outgrew that platform I redeveloped a responsive version using
         PHP, HTML, CSS and jQuery using Kirby CMS that they still use today.
       </Card>
+      <div class="two-thirds">
+        <p class="small-text">
+          Oh, and these people thought my design work was cool:
+        </p>
+        <p>
+          <i
+            >The Grammys, Communication Arts, Digiday, Creative Review, Ad Club
+            Hatch Awards, The UnderConsideration network, Dexigner, Packaging of
+            the World, Art of the Menu, Art Directors Club of NJ, New England
+            Book Show Award, Council of Editors of Learned Journals (CELJ),
+            &amp; more…</i
+          >
+        </p>
+      </div>
     </section>
   </div>
-  <Footer />
 </Layout>
 <style>
   .wrapper--projects {
@@ -176,3 +154,11 @@ import Footer from "../components/Footer.astro";
     }
   }
 </style>
+<script is:inline>
+  $(function () {
+    $(".project").hover(
+      () => $(".project:not(:hover)").addClass("project__fade-out"),
+      () => $(".project").removeClass("project__fade-out")
+    );
+  });
+</script>

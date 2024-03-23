@@ -73,3 +73,28 @@
     }
   }
 </style>
+<script>
+  document.getElementById("front-end")?.addEventListener("click", () => {
+    const intro = document.getElementById("intro__deets");
+    if (intro)
+      intro.innerHTML =
+        "I love to work on design systems and pattern libraries, and delivering tools and processes focused on the transition from idea to design to code. I'm currently a Senior Engineer at Jeli by PagerDuty, an incident managment and learning tool. I've worked on a variety of products and team sizes, from operating as the only frontend engineer on the launch of Ro's Mental Health offering, Ro Mind, to managing the front-end team at Tracer, a marketing data aggregation and analytics platform.";
+  });
+
+  document.getElementById("design")?.addEventListener("click", () => {
+    const intro = document.getElementById("intro__deets");
+    if (intro)
+      intro.innerHTML =
+        "Before diving into full time web development I was a senior designer and front-end developer at Visual Dialogue, a small agency working on big projects. Over five years I worked with a couple dozen clients doing a variety of projects including brand systems, books, magazines, music packaging, web sites, ecommerce platforms, advertising, you name it.";
+  });
+
+  document.getElementById("awesome")?.addEventListener("click", () => {
+    const intro = document.getElementById("intro__deets");
+    if (intro)
+      intro.innerHTML = `In 2019 I backpacked over 150 miles including the Grand Canyon Rim to Rim to Rim&mdash;around 50 miles, 21,000 feet in elevation change, over 6 days.
+      <br/><br/>
+      In 2015 my husband and I converted a 1999 ford econoline e350 into a campervan. We took off in August and spent three months living and working in the van as we drove 13,000 miles around the country.
+      <br/><br/>
+      Nowadays I garden in the summer, build furniture in the winter, and play video games through the year.`;
+  });
+</script>
