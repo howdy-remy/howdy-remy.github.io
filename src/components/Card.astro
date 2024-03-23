@@ -6,16 +6,16 @@ interface Props {
   href: string;
   linkText: string;
   targetSelf?: boolean;
+  description: string;
 }
 
-const { href, title, tag, credit, linkText, targetSelf } = Astro.props;
+const { description, href, title, tag, credit, linkText, targetSelf } =
+  Astro.props;
 ---
 
 <div class="project one-third">
   <h3>{title}</h3>
-  <p class="project__description">
-    <slot />
-  </p>
+  <article class="project__description" set:html={description} />
   <p class="project__credit">{credit}</p>
   <p class="small-text project__tags">{tag}</p>
   <a
