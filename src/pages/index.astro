@@ -2,6 +2,32 @@
 import Layout from "../layouts/Layout.astro";
 import Intro from "../components/Intro.astro";
 import Card from "../components/Card.astro";
+
+import { contentfulClient } from "../lib/contentful";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import type { EntryFieldTypes } from "contentful";
+
+interface Project {
+  contentTypeId: "project";
+  fields: {
+    title: EntryFieldTypes.Text;
+    richDescription: EntryFieldTypes.RichText;
+    credit: EntryFieldTypes.Text;
+    tag: EntryFieldTypes.Text;
+    href: EntryFieldTypes.Text;
+    linkText: EntryFieldTypes.Text;
+    targetSelf: EntryFieldTypes.Boolean;
+    sort: EntryFieldTypes.Number;
+  };
+}
+
+const projects = await contentfulClient.getEntries<Project>({
+  content_type: "project",
+});
+
+const sortedProjects = projects.items.sort(
+  (a, b) => b.fields.sort - a.fields.sort
+);
 ---
 
 <Layout title="Remy Lynch — Frontend Engineer">
@@ -17,114 +43,20 @@ import Card from "../components/Card.astro";
           >.
         </h2>
       </header>
+      {
+        sortedProjects.map(({ fields }) => (
+          <Card
+            title={fields.title}
+            credit={fields.credit}
+            tag={fields.tag}
+            href={fields.href}
+            linkText={fields.linkText}
+            targetSelf={fields.targetSelf}
+            description={documentToHtmlString(fields.richDescription)}
+          />
+        ))
+      }
 
-      <Card
-        title="Design Systems"
-        credit="created at Tracer"
-        tag="development"
-        href="https://medium.com/@howdyremy/building-design-systems-a3b3f90b101a"
-        linkText="Read about it on Medium"
-      >
-        How I approached rolling out a new design system with the team at
-        Tracer.
-      </Card>
-      <Card
-        title="Custom table components"
-        credit="created at Tracer"
-        tag="development"
-        href="https://medium.com/@howdyremy/creating-custom-table-components-6a49d49490a1"
-        linkText="Read about it on Medium"
-      >
-        Tables are the bread and butter of data analytics applications. While at
-        Tracer, a marketing data processing platform, I led the implementation
-        of our updated design system...
-      </Card>
-      <Card
-        title="Let’s talk frameworks"
-        credit="created at Tracer"
-        tag="development"
-        href="https://bit.ly/3buLbUF"
-        linkText="View the deck here"
-      >
-        While leading the frontend team at Tracer we decided to switch from
-        Ember to React. I created a pitch deck to outline the reasoning for how
-        the move could benefit the Tracer engineering team and shared the State
-        of JS statistics on how React and Ember compare across a few benchmarks.
-      </Card>
-
-      <Card
-        title="Tracer"
-        credit="created at Tracer"
-        tag="development"
-        href="https://tracer.tech"
-        linkText="visit Tracer promo site"
-      >
-        Tracer is a “data platform for marketing efficiency”. It specializes in
-        creating automated, cross-platform media reports while also benchmarking
-        trends, flighting and budgeting spend, and more. The Tracer application
-        is currently invite only, but you can learn more from the promo site and
-        article linked below.
-      </Card>
-      <Card
-        title="Woody at 100 & Lead Belly"
-        credit="Smithsonian Folkways — created at Visual Dialogue"
-        tag="design"
-        href="smithsonian-folkways"
-        linkText="see more"
-        targetSelf={true}
-      >
-        Two large format, special edition collections for Smithsonian Folkways
-        Recordings. <i>Woody at 100: The Woody Guthrie Centennial Collection</i>
-        commemorates Woody’s 100th birthday with a 150-page, 12x12 book which includes
-        essays about his life, photos, his drawings, and 57 tracks on 3 CDs. <i
-          >Lead Belly: The Smithsonian Folkways Collection</i
-        > was released two years later in the same format and focuses on the life
-        and music of Huddie Ledbetter.
-      </Card>
-      <Card
-        title="Diacritics"
-        credit="Cornell University — created with Rick Rawlins/co"
-        tag="design"
-        href="/diacritics"
-        linkText="see more"
-        targetSelf={true}
-      >
-        Cornell University, felt they needed a more contemporary design. As they
-        say “style is cyclical”, so we dusted off the incredible logotype from
-        the very first issue in 1971 and paired it with type from Hoefler & Co.
-        and a clean, modern layout that is as bold as the essays in each issue.
-        Following the initial redesign, I typeset and produced print-ready files
-        for 13 issues.
-      </Card>
-      <Card
-        title="Colloquy"
-        credit="Harvard Graduate School of Arts and Sciences — created at Visual Dialogue"
-        tag="design"
-        href="/colloquy"
-        linkText="see more"
-        targetSelf={true}
-      >
-        In 2012, Colloquy, the Harvard Graduate School of Arts and Sciences’
-        Alumni magazine came to Visual Dialogue for a much needed redesign. I
-        contributed to the initial update to the look and feel, typography,
-        layout, and organization. After completing the redesign I worked on
-        visual concepts, typographic treatments, typesetting and preparing files
-        for print for 12 issues.
-      </Card>
-      <Card
-        title="Visual Dialogue"
-        credit="created at Visual Dialogue"
-        tag="design & development"
-        href="https://visualdialogue.com"
-        linkText="visit site"
-      >
-        When I joined Visual Dialogue in 2011 their website was still in Flash
-        and XML. It was a pain to update, looked dated, and didn’t work with the
-        screen sizes of the time (bigger or smaller). I helped design the new
-        layout and initially built out a customized theme in Cargo Collective.
-        Once we outgrew that platform I redeveloped a responsive version using
-        PHP, HTML, CSS and jQuery using Kirby CMS that they still use today.
-      </Card>
       <div class="two-thirds">
         <p class="small-text">
           Oh, and these people thought my design work was cool:
